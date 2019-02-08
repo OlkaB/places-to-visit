@@ -1,29 +1,21 @@
-# places-to-visit
+# Plaves to visit
+add place from map by clicking at any POI (by default, Points Of Interest appear on the base map along with their corresponding icons. POIs include parks, schools, government buildings, and other).
 
-## Project setup
+## About project
+1. CSS lib: Vuetify (quite easy to use material component that helps to build app faster with FontAwesome5)
+2. google map loader for asynchronously used Goole Maps API
+3. Vuex to manage central state
+4. Router to provide future SPA routing needs
+
+* even though it's a small app it was modularized as a foundation to future development.
+
+
+### Project setup
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compiles and hot-reloads
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
