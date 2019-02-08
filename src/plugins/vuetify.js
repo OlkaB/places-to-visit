@@ -4,13 +4,13 @@ import 'vuetify/src/stylus/app.styl'
 
 Vue.use(Vuetify, {
   theme: {
-    primary: '#ee44aa',
-    secondary: '#424242',
-    accent: '#82B1FF',
-    error: '#FF5252',
-    info: '#2196F3',
-    success: '#4CAF50',
-    warning: '#FFC107'
+    primary: '#3f51b5',
+    secondary: '#1e88e5',
+    accent: '#e91e63',
+    error: '#f44336',
+    info: '#03a9f4',
+    success: '#4caf50',
+    warning: '#ff9800'
   },
   iconfont: 'fa',
 })
