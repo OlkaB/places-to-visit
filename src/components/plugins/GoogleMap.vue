@@ -122,13 +122,15 @@ export default {
         // prevent opening gmap default infowindow
         event.stop();
         this.isInfoWindowSaveOptionVisible = true;
-        this.getPlaceInformation(event.placeId);
+
+        this.getPlaceInformation(event.placeId);        
       }
     },
     getPlaceInformation (placeId) {
       const self = this;
       let placesService = new google.maps.places.PlacesService(self.map);
       placesService.getDetails({ placeId: placeId }, function(place, status) {
+        console.log("status ", status )
         if (status === 'OK') {
           self.clickedMapPOI = place;
 
@@ -143,6 +145,8 @@ export default {
             )
           );
           self.infowindowInstance.open(self.map);
+        } else if (status === 'OVER_QUERY_LIMIT') {
+          eventBus.$emit('toggleGMapDialog', {isVisible: true, type: 'warning', message: 'Limited free map queries has now been exceed. \nPlease wait for a minute (or more if needed) and refresh page'});
         }
       });
     }

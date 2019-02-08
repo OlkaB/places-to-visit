@@ -1,5 +1,26 @@
 import Vue from 'vue'
-import Vuetify from 'vuetify/lib'
+import Vuetify, {
+  VApp, // required
+  VAlert,
+  VAutocomplete,
+  VBtn,
+  VCard,
+  VGrid,
+  VDialog,
+  VDivider,
+  VFlex,
+  VHover,
+  VIcon,
+  VInput,
+  VList,
+  VNavigationDrawer,
+  VResponsive,
+  VSpacer,
+  VToolbar,
+  VTooltip,
+  VFadeTransition
+} from 'vuetify/lib'
+import { Ripple } from 'vuetify/lib/directives'
 import 'vuetify/src/stylus/app.styl'
 
 Vue.use(Vuetify, {
@@ -13,4 +34,28 @@ Vue.use(Vuetify, {
     warning: '#ff9800'
   },
   iconfont: 'fa',
+  components: {
+    VApp, // required
+    VAlert,
+    VAutocomplete,
+    VBtn,
+    VCard,
+    VGrid,
+    VDialog,
+    VDivider,
+    VFlex,
+    VHover,
+    VIcon,
+    VInput,
+    VList,
+    VNavigationDrawer,
+    VResponsive,
+    VSpacer,
+    VToolbar,
+    VTooltip,
+    VFadeTransition
+  },
+  directives: {
+    Ripple
+  }
 })

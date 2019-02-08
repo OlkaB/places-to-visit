@@ -2,7 +2,7 @@
   <v-app>
     <app-menu />    
     <v-content>
-      <v-container fluid fill-height>
+      <v-container fluid fill-height grid-list-xl>
         <router-view/>
       </v-container>
     </v-content>
