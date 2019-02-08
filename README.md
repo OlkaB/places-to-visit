@@ -11,7 +11,7 @@ add place from map by clicking at any POI (by default, Points Of Interest appear
 * even though it's a small app it was modularized as a foundation to future development.
 
 ### Live preview
-https://olkab.github.io/places-live/
+https://olkab.github.io/places-to-visit__live/
 
 ### Project setup
 ```
