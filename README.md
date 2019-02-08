@@ -6,6 +6,7 @@ add place from map by clicking at any POI (by default, Points Of Interest appear
 2. google map loader for asynchronously used Goole Maps API
 3. Vuex to manage central state
 4. Router to provide future SPA routing needs
+5. Babel polfill for es6 Symbol (for IE11)
 
 * even though it's a small app it was modularized as a foundation to future development.
 
