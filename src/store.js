@@ -17,30 +17,30 @@ export default new Vuex.Store({
 
   getters: {
     places (state) {
-      return state.places;
+      return state.places
     },
     userName (state) {
-      return state.user.name;
+      return state.user.name
     },
     checkIfPlaceIsOnList: state => placeId => {
-      return checkByValueIfObjectIsInArray(state.places, 'id', placeId);
+      return checkByValueIfObjectIsInArray(state.places, 'id', placeId)
     }
   },
 
   mutations: {
     removePlaceFromList (state, placeId) {
       state.places = state.places.filter(function (place) {
-        return (place.id) !== (placeId);
-      });
+        return (place.id) !== (placeId)
+      })
     },
     addPlaceToList (state, placeData) {
-      const isPlaceInArr = checkByValueIfObjectIsInArray(state.places, 'id', placeData['id']);
+      const isPlaceInArr = checkByValueIfObjectIsInArray(state.places, 'id', placeData['id'])
 
       if (isPlaceInArr) {
-        return;
+        return
       }
 
-      state.places.unshift(placeData);
+      state.places.unshift(placeData)
     }
   },
 

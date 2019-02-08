@@ -63,7 +63,7 @@ export default {
   },
   methods: {
     removePlaceFromList (event, placeId) {
-      this.$store.commit('removePlaceFromList', placeId);
+      this.$store.commit('removePlaceFromList', placeId)
     },
     showPlaceOnMap (event, placeId, placeGeometry) {
       eventBus.$emit('showPlaceOnMap', {

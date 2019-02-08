@@ -9,7 +9,7 @@
           <v-list-tile-content>
             <v-list-tile-title>{{ item.name }}</v-list-tile-title>
           </v-list-tile-content>
-        </v-list-tile>      
+        </v-list-tile>
       </v-list>
     </v-navigation-drawer>
 
@@ -25,13 +25,13 @@
       </router-link>
 
       <v-spacer></v-spacer>
-      
+
       <span>{{ this.$store.getters.userName }}</span>
       <router-link to="/404">
         <v-btn flat fab small>
           <v-icon>fa fa-sign-out-alt</v-icon>
         </v-btn>
-      </router-link>      
+      </router-link>
     </v-toolbar>
   </div>
 </template>
@@ -40,12 +40,11 @@
 import MenuItems from '@/mixins/menu-items.js'
 
 export default {
-  data() {
+  data () {
     return {
       isMenuVisible: false
     }
   },
   mixins: [MenuItems]
-};
+}
 </script>
-

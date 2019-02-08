@@ -5,10 +5,10 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-export const eventBus = new Vue()
-
 // Global filters
-import "@/filters/array-filters"
+import '@/filters/array-filters'
+
+export const eventBus = new Vue()
 
 Vue.config.productionTip = false
 

@@ -81,42 +81,42 @@ export default {
   },
   computed: {
     placesList () {
-      return this.$store.getters.places;
+      return this.$store.getters.places
     },
-    placesListFiltered() {
+    placesListFiltered () {
       return this.filterObjectsArrayByValueQuery(
         this.placesList,
         this.placeQuery
       )
-    },
+    }
   },
   methods: {
     closePlacesListAlert (delayTimeMs) {
-      const self = this;
+      const self = this
 
       setTimeout(function () {
-        self.placesListAlert.isVisible = false;
-      }, delayTimeMs);
-    },
+        self.placesListAlert.isVisible = false
+      }, delayTimeMs)
+    }
   },
   watch: {
     placesList: {
       handler (places) {
-        this.numOfPlaces = places.length;
+        this.numOfPlaces = places.length
       },
       deep: true,
       immediate: true
     },
     numOfPlaces (val, oldVal) {
       if (val > oldVal) {
-        this.placesListAlert.isVisible = true;
-        this.placesListAlert.type = 'success';
-        this.placesListAlert.message = 'New place has been added';
+        this.placesListAlert.isVisible = true
+        this.placesListAlert.type = 'success'
+        this.placesListAlert.message = 'New place has been added'
       }
       if (val < oldVal) {
-        this.placesListAlert.isVisible = true;
-        this.placesListAlert.type = 'error';
-        this.placesListAlert.message = 'Place has been successfully removed';
+        this.placesListAlert.isVisible = true
+        this.placesListAlert.type = 'error'
+        this.placesListAlert.message = 'Place has been successfully removed'
       }
       this.closePlacesListAlert(8000)
     }
@@ -127,7 +127,7 @@ export default {
         geometry: placeData.geometry,
         zoom: 12,
         id: placeData.id
-      };
+      }
     })
   }
 }

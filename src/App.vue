@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <app-menu />    
+    <app-menu />
     <v-content>
       <v-container fluid fill-height grid-list-xl>
         <router-view/>
@@ -17,7 +17,7 @@ export default {
   data () {
     return {
       drawer: false
-    };
+    }
   },
   props: {
     source: String
@@ -25,7 +25,7 @@ export default {
   components: {
     'app-menu': TheMenu
   }
-};
+}
 </script>
 
 <style>
@@ -63,4 +63,3 @@ export default {
   background-color: #3f51b5;
 }
 </style>
-

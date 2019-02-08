@@ -18,7 +18,7 @@
 import { eventBus } from '@/main.js'
 import adjustFaIcon from '@/mixins/fa-icons.js'
 
-export default {  
+export default {
   mixins: [adjustFaIcon],
   props: {
     isVisible: {
@@ -47,15 +47,15 @@ export default {
   created () {
     if (eventBus) {
       eventBus.$on('toggleGMapDialog', dialogParams => {
-        this.dialogIsVisible = dialogParams.isVisible;
-        this.dialogMessage = dialogParams.message;
-        this.dialogType = dialogParams.type;
+        this.dialogIsVisible = dialogParams.isVisible
+        this.dialogMessage = dialogParams.message
+        this.dialogType = dialogParams.type
       })
     }
   },
   beforeDestroy () {
     if (eventBus) {
-      eventBus.$off();
+      eventBus.$off()
     }
   }
 }
