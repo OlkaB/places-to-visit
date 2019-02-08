@@ -1,5 +1,7 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>Ooops! 404 error</h1>
+    <p>this is only a placeholder page.</p>
+    <router-link to="/">Go to home page</router-link>
   </div>
 </template>
